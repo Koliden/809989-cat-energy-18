@@ -1,0 +1,91 @@
+.form {
+  text-transform: uppercase;
+}
+
+.form__title {
+  padding: 8px 20px 39px 20px;
+  width: 230px;
+  font-size: 14px;
+  line-height: 18px;
+  font-weight: normal;
+}
+
+.form__wrapper {
+  padding: 0 20px;
+
+
+  &--border {
+    padding: 20px;
+    border: 1px solid #ededed;
+  }
+}
+
+.form__wrapper-input {
+  display: flex;
+  align-items: center;
+  margin-bottom: 14px;
+
+  label {
+    padding-right: 15px;
+  }
+
+  input {
+    width: 50%;
+    flex-grow: 1;
+  }
+}
+
+.form__label {
+  font-family: "Oswald", "Arial", sans-serif;
+  font-size: 16px;
+  line-height: 18px;
+  color: @less-h-color;
+}
+
+.form__label--checkbox {
+  display: block;
+}
+
+.form__input {
+  padding: 13px 13px 12px 14px;
+  text-transform: uppercase;
+  color: @text-color;
+  border: 1px solid @border;
+}
+
+.form__input::placeholder {
+  color: @text-color;
+}
+
+.form__fieldset {
+  margin: 0;
+  padding: 0;
+  border: none;
+}
+
+.form__legend {
+  font-family: "Oswald", "Arial", sans-serif;
+  font-size: 24px;
+  line-height: 24px;
+  color: @h-color;
+}
+
+.form__textarea {
+  font-family: "Oswald", "Arial", sans-serif;
+  text-transform: uppercase;
+  border: 1px solid @border;
+  color: @text-color;
+  resize: none;
+}
+
+.form__textarea::placeholder {
+  color: @text-color;
+}
+
+.form__required-fields {
+  font-size: 14px;
+  line-height: 16px;
+  text-align: center;
+  text-transform: none;
+  color: @text-color;
+}

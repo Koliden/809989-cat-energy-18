@@ -1,0 +1,80 @@
+.additional {
+  padding: 20px 20px 35px 20px;
+}
+
+.additional__title {
+  padding-bottom: 40px;
+  font-size: 24px;
+  font-weight: normal;
+  color: @h-color;
+}
+
+.additional__item {
+  padding-bottom: 17px;
+  border-bottom: 1px solid #cdcdcd;
+
+  &:first-of-type {
+    border-top: 1px solid #cdcdcd;
+  }
+}
+
+.additional__item-title {
+  padding: 13px 0 12px 0;
+  font-size: 16px;
+  font-weight: normal;
+  text-transform: uppercase;
+}
+
+.additional__item-table {
+  border-collapse: collapse;
+  margin-bottom: 12px;
+}
+
+.additional__item-table tr {
+  display: flex;
+  justify-content: space-between;
+  width: 280px;
+  padding-bottom: 2px;
+}
+
+.additional__item-table th {
+  font-size: 14px;
+  line-height: 14px;
+  font-weight: normal;
+  text-align: left;
+  color: @text-color;
+}
+
+.additional__item-table td {
+  font-size: 14px;
+  line-height: 14px;
+  text-align: right;
+  color: @text-color;
+}
+
+.additional__promo {
+  position: relative;
+  margin-top: 39px;
+  padding: 170px 59px 26px 59px;
+  background-color: @btn-bg-color;
+  background-image: url("../../img/gift-photo-mobile@1x.jpg");
+  background-repeat: no-repeat;
+}
+
+.additional__promo-tagline {
+  font-size: 16px;
+  line-height: 20px;
+  text-align: center;
+  color: #ffffff;
+
+  &::after {
+    position: absolute;
+    content: "";
+    top: 65px;
+    left: 115px;
+    height: 61px;
+    width: 56px;
+    background-image: url("../../img/icon-gift.svg");
+    background-repeat: no-repeat;
+  }
+}
