@@ -1,18 +1,38 @@
 .advantage {
-  padding: 29px 20px 22px 20px;
+  padding-top: 27px;
+  padding-bottom: 21px;
+
+  @media @tablet {
+    padding-bottom: 20px;
+  }
 }
 
 .advantage__title {
   padding-bottom: 40px;
   font-size: 36px;
   font-weight: normal;
+
+  @media @tablet {
+    padding-top: 18px;
+    font-size: 60px;
+  }
+
+  @media @desktop {
+    padding-top: 15px;
+  }
 }
 
 .advantage__list {
-
   margin: 0;
   padding: 0;
   list-style: none;
+
+  @media @tablet {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding-top: 32px;
+  }
 }
 
 .advantage__item {
@@ -29,45 +49,77 @@
     height: 60px;
     width: 60px;
     background-color: @btn-bg-color;
+    background-repeat: no-repeat;
+    background-position: center;
   }
-}
 
-.advantage__item--leaf::after {
-  position: absolute;
-  content: "";
-  top: 5px;
-  left: 5px;
-  height: 60px;
-  width: 60px;
-  background-image: url("../../img/advantage-leaf@1x.png");
-}
+  &--leaf::before {
+    background-image: url("../img/advantage-leaf@1x.png");
+  }
 
-.advantage__item--quick::after {
-  position: absolute;
-  content: "";
-  top: 5px;
-  left: 5px;
-  height: 60px;
-  width: 60px;
-  background-image: url("../../img/advantage-powder@1x.png");
-}
+  &--quick::before {
+    background-image: url("../img/advantage-powder@1x.png");
+  }
 
-.advantage__item--meal::after {
-  position: absolute;
-  content: "";
-  top: 5px;
-  left: 5px;
-  height: 60px;
-  width: 60px;
-  background-image: url("../../img/advantage-dining@1x.png");
-}
+  &--meal::before {
+    background-image: url("../img/advantage-dining@1x.png");
+  }
 
-.advantage__item--timer::after {
-  position: absolute;
-  content: "";
-  top: 5px;
-  left: 5px;
-  height: 60px;
-  width: 60px;
-  background-image: url("../../img/advantage-clock@1x.png");
+  &--timer::before {
+    background-image: url("../img/advantage-clock@1x.png");
+  }
+
+
+  @media @tablet {
+    box-sizing: border-box;
+    padding: 110px 75px 0 0;
+    width: 325px;
+    min-height: 318px;
+    font-size: 16px;
+    line-height: 24px;
+
+    &::before {
+      height: 80px;
+      width: 80px;
+    }
+
+    &::after {
+      position: absolute;
+      top: 88px;
+      left: 113px;
+      font-family: "Oswald", "Arial", sans-serif;
+      font-size: 281px;
+      color: @bg-footer;
+      content: "";
+      z-index: -1;
+    }
+
+    &--leaf::after {
+      left: 117px;
+      content: "1";
+    }
+
+    &--quick::after {
+      content: "2";
+    }
+
+    &--meal::after {
+      content: "3";
+    }
+
+    &--timer::after {
+      content: "4";
+    }
+  }
+
+
+  @media @desktop {
+    padding-top: 112px;
+    min-height: 220px;
+
+    &:last-child {
+      padding-right: 0;
+      width: 245px;
+    }
+  }
 }

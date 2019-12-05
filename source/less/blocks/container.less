@@ -1,0 +1,21 @@
+.container {
+  width: @width-mobile;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0 20px;
+  box-sizing: border-box;
+
+  @media @tablet {
+    width: @width-tablet;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0 30px;
+  }
+
+  @media @desktop {
+    width: @width-desktop;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0 40px;
+  }
+}
