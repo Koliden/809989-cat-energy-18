@@ -1,6 +1,7 @@
 .btn {
   display: block;
-  padding: 9px 10px 8px 10px;
+  box-sizing: border-box;
+  padding: 8px;
   font-family: "Oswald", "Arial", sans-serif;
   font-size: 16px;
   text-transform: uppercase;
@@ -16,5 +17,13 @@
 }
 
 .btn--catalog {
-  flex-grow: 1;
+  width: 280px;
+
+  @media @tablet {
+    width: 249px;
+  }
+
+  @media @desktop {
+    width: 169px;
+  }
 }

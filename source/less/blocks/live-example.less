@@ -1,27 +1,90 @@
 .live-example {
+  position: relative;
   padding: 29px 20px 0 20px;
   background-color: @bg-footer;
+
+  @media @tablet {
+    padding-top: 0;
+    background-image: linear-gradient(to bottom, white 57.3%, @bg-footer 57.3%);
+  }
+
+  @media @desktop {
+    background-image: linear-gradient(to bottom, white 30.6%, @bg-footer 30.6%);
+  }
+}
+
+.live-example__container {
+  @media @tablet {
+    margin-top: -54px;
+    border-top: 1px solid @border;
+  }
+
+  @media @desktop {
+    display: flex;
+    align-items: flex-start;
+    margin-top: 0;
+    border-top: none;
+  }
+}
+
+.live-example__wrapper {
+  @media @tablet {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+
+  @media @desktop {
+    width: 435px;
+    flex-direction: column;
+  }
 }
 
 .live-example__title {
-  padding-bottom: 35px;
+  margin-bottom: 36px;
   font-size: 36px;
   font-weight: normal;
   color: @h-color;
+
+  @media @tablet {
+    margin-bottom: 64px;
+    padding-top: 43px;
+    font-size: 60px;
+  }
+
+  @media @desktop {
+    margin-bottom: 147px;
+    padding-top: 70px;
+  }
 }
 
 .live-example__description {
   width: 266px;
-  margin: 0;
-  padding-bottom: 25px;
+  margin: 0 0 25px 0;
   font-family: "Arial", sans-serif;
   font-size: 14px;
   line-height: 18px;
   color: @text-color;
+
+  @media @tablet {
+    margin-bottom: 53px;
+    width: 100%;
+    font-size: 16px;
+    line-height: 24px;
+  }
+
+  @media @desktop {
+    margin-bottom: 67px;
+  }
 }
 
 .live-example__achieved {
   display: flex;
+
+  @media @desktop {
+    margin-bottom: 50px;
+  }
 }
 
 .live-example__achieved-list {
@@ -34,34 +97,59 @@
   &:last-child {
     margin-right: 0;
   }
+
+  @media @tablet {
+    margin-right: 42px;
+    width: 160px;
+  }
 }
 
 .live-example__term {
-  padding: 14px 10px 17px 10px;
+  padding: 14px 10px 17px;
   font-family: "Oswald", "Arial", sans-serif;
   text-transform: uppercase;
   font-size: 24px;
   text-align: center;
   color: @h-color;
+
+  @media @tablet {
+    padding-top: 22px;
+    padding-bottom: 25px;
+    font-size: 30px;
+  }
 }
 
 .live-example__determ {
   box-sizing: border-box;
   position: absolute;
   top: 46px;
-  left: -24px;
+  left: -22px;
   padding: 0 5px;
-  width: 87px;
+  width: 86px;
   min-height: 21px;
   font-size: 12px;
   line-height: 12px;
   text-align: center;
   color: @text-color;
   background-color: @bg-footer;
+
+  @media @tablet {
+    top: 59px;
+    left: -30px;
+    padding: 0 5px;
+    width: 140px;
+    font-size: 14px;
+    line-height: 20px;
+    background-color: white;
+  }
+
+  @media @desktop {
+    background-color: @bg-footer;
+  }
 }
 
 .live-example__food-costs {
-  padding: 34px 10px 10px 10px;
+  padding: 34px 10px 0 10px;
   margin: 0;
   font-family: "Oswald", "Arial", sans-serif;
   text-transform: uppercase;
@@ -69,4 +157,34 @@
   line-height: 20px;
   text-align: center;
   color: @h-color;
+
+  @media @tablet {
+    padding: 0;
+    padding-top: 6px;
+    width: 175px;
+    font-size: 20px;
+    line-height: 30px;
+    text-align: right;
+  }
+
+  @media @desktop {
+    width: 435px;
+    text-align: left;
+
+    & span {
+      padding-left: 60px;
+    }
+  }
+}
+
+.live-example__slider {
+  min-height: 362px;
+
+  @media @tablet {
+    min-height: 716px;
+  }
+
+  @media @desktop {
+    min-height: 667px;
+  }
 }

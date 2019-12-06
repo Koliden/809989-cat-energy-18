@@ -1,4 +1,5 @@
 .contacts {
+  position: relative;
   background-color: @bg-footer;
 
   &--light {
@@ -6,27 +7,71 @@
   }
 }
 
-.contacts__wrapper {
+.contacts__container {
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
+
+  @media @tablet {
+    padding: 0 70px;
+  }
+
+  @media @desktop {
+    position: absolute;
+    top: 95px;
+    left: calc(50% - 605px);
+    width: 570px;
+    min-height: 201px;
+    background-color: gray;
+  }
 }
 
 .contacts__title {
+  margin-bottom: 26px;
+  padding-top: 28px;
   width: 123px;
-  padding: 28px 5px 26px 19px;
   font-size: 16px;
   line-height: 20px;
   text-transform: uppercase;
   font-weight: normal;
   color: @h-color;
+
+  @media @tablet {
+    margin-bottom: 61px;
+    padding-top: 66px;
+    font-size: 20px;
+    line-height: 25px;
+  }
 }
 
 .contacts__address {
   width: 135px;
-  padding: 28px 25px 10px 5px;
+  padding: 28px 3px 0 0;
   margin: 0;
   font-size: 14px;
   line-height: 20px;
   color: @text-color;
+
+  @media @tablet {
+    padding-top: 64px;
+    width: 155px;
+    font-size: 16px;
+    line-height: 20px;
+    text-align: right;
+
+    & span {
+      display: block;
+      padding-top: 20px;
+    }
+  }
+}
+
+.contacts__map {
+  display: block;
+  min-height: 362px;
+  margin: 0 auto;
+
+  @media @tablet {
+    min-height: 396px;
+  }
 }
