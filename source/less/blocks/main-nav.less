@@ -2,19 +2,70 @@
   position: relative;
 }
 
+.main-nav--nojs .main-nav__toggle {
+  display: none;
+}
+
 .main-nav__toggle {
   position: absolute;
-  top: -42px;
-  right: 15px;
-  width: 25px;
-  height: 19px;
-  background: transparent;
+  top: -53px;
+  right: -6px;
+  width: 40px;
+  height: 40px;
+  background-color: transparent;
   border: none;
-  background-image: url("../img/icon-mobile-menu.svg"),
-    url("../img/icon-close.svg");
   background-repeat: no-repeat;
+  cursor: pointer;
 
   @media @tablet {
+    display: none;
+  }
+}
+
+.main-nav--closed .main-nav__toggle::before {
+  position: absolute;
+  content: "";
+  top: 11px;
+  left: 10px;
+  width: 25px;
+  height: 2px;
+  background-color: black;
+  box-shadow: 0 8px 0 0 black, 0 16px 0 0 black;
+}
+
+.main-nav--closed .main-nav__toggle:active::before {
+  background-color: rgba(0, 0, 0, 0.3);
+  box-shadow: 0 8px 0 0 rgba(0, 0, 0, 0.3), 0 16px 0 0 rgba(0, 0, 0, 0.3);
+}
+
+.main-nav--opened .main-nav__toggle {
+  &::before,
+  &::after {
+    position: absolute;
+    content: "";
+    top: 19px;
+    left: 10px;
+    width: 25px;
+    height: 2px;
+    background-color: black;
+  }
+
+  &::before {
+    transform: rotate(45deg);
+  }
+
+  &::after {
+    transform: rotate(-45deg);
+  }
+
+  &:active::before,
+  &:active::after {
+    background-color: rgba(0, 0, 0, 0.3);
+  }
+}
+
+@media @mobile {
+  .main-nav--closed .main-nav__list {
     display: none;
   }
 }
