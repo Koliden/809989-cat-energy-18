@@ -214,7 +214,7 @@
   }
 }
 
-.form__flag-radio input[type="radio"]:checked + .form__label--radio::after {
+.form__wrapper-radio input[type="radio"]:checked + .form__label--radio::after {
   position: absolute;
   content: "";
   top: 3px;
@@ -232,7 +232,7 @@
   }
 }
 
-.form__flag-checkbox input[type="checkbox"]:checked + .form__label--checkbox::after {
+.form__wrapper-checkbox input[type="checkbox"]:checked + .form__label--checkbox::after {
   position: absolute;
   content: "";
   top: -2px;
@@ -249,10 +249,12 @@
   }
 }
 
-.form__flag-radio input[type="radio"]:focus + .form__label--radio::before,
-.form__flag-checkbox input[type="checkbox"]:focus + .form__label--checkbox::before {
+
+.form__wrapper-radio input[type="radio"]:focus + .form__label--radio::before,
+.form__wrapper-checkbox input[type="checkbox"]:focus + .form__label--checkbox::before {
   outline: 1px solid @text-color;
 }
+
 
 .form__input {
   padding: 13px 13px 12px 14px;
@@ -276,6 +278,13 @@
   margin: 0;
   padding: 0;
   border: none;
+
+  @media @mobile {
+    &:first-of-type .form__legend {
+      display: block;
+      width: 225px;
+    }
+  }
 }
 
 .form__legend {
@@ -306,15 +315,6 @@
 
   @media @mobile {
     left: -20px;
-
-    &--contact {
-      display: block;
-      width: 225px;
-    }
-
-    &--comment {
-      margin-bottom: 35px;
-    }
   }
 
   @media @tablet {
