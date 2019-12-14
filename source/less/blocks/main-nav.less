@@ -106,6 +106,15 @@
     color: @h-color;
   }
 
+  & a:hover,
+  & a:focus {
+    opacity: 0.6;
+  }
+
+  & a:active {
+    opacity: 0.3;
+  }
+
   @media @tablet {
     font-size: 18px;
     font-weight: normal;
@@ -114,7 +123,6 @@
     & a {
       margin-right: 35px;
       padding-bottom: 9px;
-      color: @h-color;
     }
 
     &:last-child a {

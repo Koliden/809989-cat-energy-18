@@ -1,15 +1,21 @@
 <!DOCTYPE html>
 <html lang="ru">
+
 <head>
   <meta charset="utf-8">
   <title>HTML Academy: Кэт энерджи</title>
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <link href="css/style.css" rel="stylesheet">
 </head>
+
 <body>
   <header class="header container">
     <a class="header__logo" href="index.html">
-      <img class="header__logo-image" src="img/logo-mobile.svg" width="191" height="39" alt="Логотип Cat Energy">
+      <picture>
+        <source media="(min-width: 1300px)" srcset="img/logo-desktop.svg">
+        <source media="(min-width: 768px)" srcset="img/logo-tablet.svg">
+        <img class="header__logo-image" src="img/logo-mobile.svg" width="191" height="38" alt="Логотип Cat Energy">
+      </picture>
     </a>
     <nav class="main-nav main-nav--opened main-nav--nojs">
       <button class="main-nav__toggle"><span class="visually-hidden">Меню</span></button>
@@ -32,7 +38,7 @@
           </div>
           <div class="form__wrapper-input">
             <label class="form__label">Вес (кг):*</label>
-            <input class="form__input" type="number" name="weight" placeholder="7" required>
+            <input class="form__input" type="number" step="0.01" name="weight" placeholder="7" required>
           </div>
           <div class="form__wrapper-input">
             <label class="form__label">Возраст (лет):</label>
@@ -54,10 +60,16 @@
           <div class="form__wrapper-input">
             <label class="form__label" for="email">E-mail:*</label>
             <input class="form__input form__input--email" id="email" type="email" name="email" placeholder="kuklachev@gmail.com" required>
+            <svg class="footer__input-svg footer__input-svg--email" width="18" height="14">
+              <use xlink:href="img/sprite.svg#email"></use>
+            </svg>
           </div>
           <div class="form__wrapper-input">
             <label class="form__label" for="tel">Телефон:*</label>
             <input class="form__input form__input--tel" id="tel" type="tel" name="tel" placeholder="8 (960) 900-60-90" required>
+            <svg class="footer__input-svg footer__input-svg--tel" width="21" height="21">
+              <use xlink:href="img/sprite.svg#phone"></use>
+            </svg>
           </div>
         </div>
       </fieldset>
@@ -70,13 +82,10 @@
         <div class="form__wrapper-checkbox">
           <input class="visually-hidden" id="sweetener" type="checkbox" name="sweetener" checked>
           <label class="form__label form__label--checkbox" for="sweetener">Сахарозаменитель</label>
-
           <input class="visually-hidden" id="water" type="checkbox" name="water">
           <label class="form__label form__label--checkbox" for="water">Питьевая вода</label>
-
           <input class="visually-hidden" id="milk" type="checkbox" name="milk">
           <label class="form__label form__label--checkbox" for="milk">Молоко</label>
-
           <input class="visually-hidden" id="vitamins" type="checkbox" name="vitamins">
           <label class="form__label form__label--checkbox" for="vitamins">Витамины</label>
         </div>
@@ -91,23 +100,46 @@
         <h2 class="contacts__title">Приглашаем к&nbsp;сотрудничеству дилеров!</h2>
         <p class="contacts__address">ул. Большая Конюшенная, д. 19/8 <span>Санкт-Петербург</span></p>
       </div>
-      <img class="contacts__map" src="https://via.placeholder.com/320x362" width="320" height="362" alt="ул. Большая Конюшенная, д. 19/8 Санкт-Петербург">
+      <div class="contacts__map" id="map"></div>
     </section>
   </main>
   <footer class="footer">
     <div class="footer__wrapper container">
-      <a class="footer__logo" href="index.html"><img class="footer__logo-img" src="img/logo-footer.svg" width="128" height="24" alt="Логотип Cat Energy"></a>
+      <a class="footer__logo" href="index.html">
+        <img class="footer__logo-img" src="img/logo-footer.svg" width="128" height="24" alt="Логотип Cat Energy">
+      </a>
       <div class="footer__social">
-        <a href="#" class="footer__social-link footer__social-link--vk"><img src="img/icon-vk.svg" width="22" height="12" alt="Логотип Вконтакте"><span class="visually-hidden">Мы в Вконтакте</span></a>
-        <a href="#" class="footer__social-link footer__social-link--insta"><img src="img/icon-insta.svg" width="17" height="17" alt="Логотип Инстаграм"><span class="visually-hidden">Мы в Инстаграме</span></a>
-        <a href="#" class="footer__social-link footer__social-link--fb"><img src="img/icon-fb.svg" width="10" height="19" alt="Логотип Фейсбук"><span class="visually-hidden">Мы в Фейсбуке</span></a>
+        <a href="#" class="footer__social-link footer__social-link--vk">
+          <svg width="22" height="12">
+            <use xlink:href="img/sprite.svg#iconVk"></use>
+          </svg><span class="visually-hidden">Мы в Вконтакте</span>
+        </a>
+        <a href="#" class="footer__social-link footer__social-link--insta">
+          <svg width="17" height="17">
+            <use xlink:href="img/sprite.svg#iconInsta"></use>
+          </svg>
+          <span class="visually-hidden">Мы в Инстаграме</span>
+        </a>
+        <a href="#" class="footer__social-link footer__social-link--fb">
+          <svg width="10" height="19">
+            <use xlink:href="img/sprite.svg#iconFb"></use>
+          </svg>
+          <span class="visually-hidden">Мы в Фейсбуке</span>
+        </a>
       </div>
       <div class="footer__copyright">
         <a class="footer__copyright-link" href="https://htmlacademy.ru/intensive/adaptive">HTML Academy</a>
-        <a class="footer__copyright-link footer__copyright-link--logo" href="https://htmlacademy.ru/intensive/adaptive"><img class="footer__copyright-img" src="img/htmlacademy.svg" width="41" height="41" alt="Логотип HTML Academy"></a>
+        <a class="footer__copyright-link" href="https://htmlacademy.ru/intensive/adaptive">
+          <svg class="footer__copyright-img" width="41" height="41">
+            <use xlink:href="img/sprite.svg#iconAcademy"></use>
+          </svg>
+        </a>
       </div>
     </div>
   </footer>
+  <script src="https://api-maps.yandex.ru/2.1/?apikey=88fde531-13d5-47b7-a01a-8993fcae5f55&lang=ru_RU" type="text/javascript"></script>
+  <script src="js/picturefill.min.js"></script>
   <script src="js/script.js"></script>
 </body>
+
 </html>

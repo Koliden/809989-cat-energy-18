@@ -13,8 +13,13 @@
     flex-direction: row;
     justify-content: space-between;
     align-items: flex-start;
-    padding-top: 55px;
-    padding-bottom: 30px;
+    padding-top: 53px;
+    padding-bottom: 31px;
+  }
+
+  @media @desktop {
+    padding-top: 51px;
+    padding-bottom: 34px;
   }
 }
 
@@ -25,54 +30,133 @@
   text-align: center;
   border-bottom: 1px solid #d9d9d9;
 
+  &:hover,
+  &:focus {
+    opacity: 0.8;
+  }
+
+  &:active {
+    opacity: 0.6;
+  }
+
   @media @tablet {
     padding-top: 10px;
+    padding-left: 10px;
+    width: 163px;
+    text-align: left;
     border: none;
+  }
+
+  @media @desktop {
+    padding-left: 19px;
   }
 }
 
 .footer__social {
   display: flex;
   justify-content: flex-start;
+  align-items: center;
   width: 280px;
+  min-height: 60px;
   border-bottom: 1px solid #d9d9d9;
 
   @media @tablet {
+    min-height: 44px;
+    border: none;
+  }
+
+  @media @desktop {
+    min-height: 50px;
     border: none;
   }
 }
 
 .footer__social-link {
-  padding: 20px 15px 17px;
+  fill: #666666;
+
+  &:hover,
+  &:focus {
+    fill: @btn-bg-color;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+
+  &--vk {
+    margin-left: 72px;
+  }
+
+  &--insta {
+    padding: 8px 38px 0;
+  }
 
   @media @tablet {
-    padding-top: 10px;
     border: none;
+
+    &--insta {
+      padding: 2px 28px 0;
+    }
+
+    &--vk > svg {
+      width: 30px;
+      height: auto;
+    }
+
+    &--insta > svg {
+      width: 23px;
+      height: auto;
+    }
+
+    &--fb > svg {
+      width: 14px;
+      height: auto;
+    }
   }
-}
 
-.footer__social-link--vk {
-  margin-left: 57px;
-}
-
-.footer__social-link--insta {
-  padding-right: 25px;
-  padding-left: 22px;
+  @media @desktop {
+    &--insta {
+      padding: 2px 28px 0;
+    }
+  }
 }
 
 .footer__copyright {
   display: flex;
   justify-content: space-between;
-  align-items: flex-start;
+  align-items: center;
+  padding-top: 18px;
+  padding-bottom: 25px;
   width: 280px;
-  padding-top: 25px;
 
   @media @tablet {
-    justify-content: flex-end;
-    padding-top: 8px;
-
-    &-link--logo {
-      padding-left: 20px;
-    }
+    padding: 0 10px 0 0;
+    width: 163px;
   }
+
+  @media @desktop {
+    padding: 4px 20px 0 0;
+  }
+}
+
+.footer__copyright-link {
+  color: @text-color;
+
+  &:hover,
+  &:focus,
+  &:hover > .footer__copyright-img,
+  &:focus > .footer__copyright-img {
+    color: @text-color;
+    fill: @btn-bg-color;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+}
+
+.footer__copyright-img {
+  position: relative;
+  display: block;
+  fill: #666666;
 }

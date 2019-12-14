@@ -35,6 +35,10 @@
     padding: 75px 50px 20px 50px;
     width: 470px;
 
+    &--mass-set .programs__description {
+      width: auto;
+    }
+
     &:last-child {
       margin-bottom: 30px;
     }
@@ -166,6 +170,10 @@
   text-transform: uppercase;
   color: @h-color;
 
+  &:active {
+    opacity: 0.3;
+  }
+
   &::after {
     position: absolute;
     content: "";
@@ -175,6 +183,13 @@
     width: 25px;
     background-image: url("../img/icon-right-arrow-long.svg");
     background-repeat: no-repeat;
+  }
+
+  &:hover::after,
+  &:focus::after {
+    height: 12px;
+    width: 34px;
+    background-image: url("../img/icon-right-arrow-verylong.svg");
   }
 
   @media @tablet {
