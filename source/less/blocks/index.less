@@ -9,8 +9,13 @@
       right: 0;
       width: 50%;
       height: 695px;
-      background: #64a83b url("../img/index-background-desktop@1x.jpg") no-repeat 100% 0%;
+      background: #64a83b url("../img/index-background-desktop@1x.jpg") no-repeat;
       z-index: -1;
+
+      @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
+        background-image: url("../img/index-background-desktop@2x.jpg");
+        background-size: 720px auto;
+      }
     }
   }
 }

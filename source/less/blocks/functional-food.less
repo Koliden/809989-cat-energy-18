@@ -18,26 +18,38 @@
 
 .functional-food__container {
   display: flex;
-  justify-content: center;
-  align-content: space-between;
-  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: flex-start;
   min-height: 480px;
   background: url("../img/index-can-mobile@1x.png") no-repeat 20px 165px,
     url("../img/index-background-mobile@1x.jpg") no-repeat 0 0;
 
+  @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
+    background: url("../img/index-can-mobile@2x.png") no-repeat 20px 165px,
+      url("../img/index-background-mobile@2x.jpg") no-repeat 0 0;
+    background-size: 280px auto, 320px auto;
+  }
+
   @media @tablet {
-    justify-content: flex-start;
-    flex-direction: column;
-    align-items: flex-start;
     padding-top: 20px;
     min-height: 845px;
     background: url("../img/index-can-tablet@1x.jpg") no-repeat 30px 245px;
+
+    @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
+      background: url("../img/index-can-tablet@2x.jpg") no-repeat 30px 245px;
+      background-size: 708px auto;
+    }
   }
 
   @media @desktop {
     padding-top: 53px;
     min-height: 623px;
     background: url("../img/index-can-desktop@1x.png") no-repeat 490px 0;
+
+    @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
+      background: url("../img/index-can-desktop@2x.png") no-repeat 490px -2px;
+      background-size: 551px auto;
+    }
   }
 }
 
@@ -86,13 +98,15 @@
 }
 
 .functional-food__btn {
-  flex-grow: 1;
-  margin-bottom: 1px;
   font-size: 14px;
+
+  @media @mobile {
+
+    margin-top: 299px;
+  }
 
   @media @tablet {
     padding: 15px 10px 15px 6px;
-    flex-grow: 0;
     margin-left: 90px;
     width: 245px;
     font-size: 20px;

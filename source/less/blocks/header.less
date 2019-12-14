@@ -11,13 +11,38 @@
 }
 
 .header__logo {
-  padding: 11px 0 10px;
+  padding: 11px 0 16px;
+
+  &:hover,
+  &:focus {
+    opacity: 0.8;
+  }
+
+  &:active {
+    opacity: 0.6;
+  }
 
   @media @tablet {
-    padding: 25px 0 25px;
+    padding: 25px 0 14px;
   }
 
   @media @desktop {
-    padding: 50px 0 50px;
+    padding: 54px 0 30px;
+  }
+}
+
+.header__logo-image {
+  display: block;
+  width: 191px;
+  height: auto;
+
+  @media @tablet {
+    width: 173px;
+    height: auto;
+  }
+
+  @media @desktop {
+    width: 202px;
+    height: auto;
   }
 }

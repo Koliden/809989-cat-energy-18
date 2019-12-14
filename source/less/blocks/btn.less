@@ -9,11 +9,29 @@
   background-color: @btn-bg-color;
   color: @btn-color;
   border: none;
+
+  &:hover,
+  &:focus {
+    background-color: #5eaa2f;
+  }
+
+  &:active {
+    color: rgba(255, 255, 255, 0.3);
+  }
 }
 
 .btn--gray {
   background-color: @bg-footer;
   color: @text-color;
+
+  &:hover,
+  &:focus {
+    background-color: #ebebeb;
+  }
+
+  &:active {
+    color: rgba(68, 68, 68, 0.3);
+  }
 }
 
 .btn--catalog {
