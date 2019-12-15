@@ -265,17 +265,13 @@
   opacity: 0.3;
 }
 
-/* временно скрывает управление на input tupe="number"
-
-input::-webkit-outer-spin-button,
-input::-webkit-inner-spin-button {
-  -webkit-appearance: none;
+.form__input[type="number"] {
+  &::-webkit-outer-spin-button,
+  &::-webkit-inner-spin-button {
+    appearance: none;
+  }
+  appearance: textfield;
 }
-
-input[type="number"] {
-  -moz-appearance: textfield;
-}
-*/
 
 .form__input {
   padding: 13px 13px 12px 14px;
@@ -313,39 +309,34 @@ input[type="number"] {
 
     &:invalid {
       padding: 9px 10px 9px 17px;
-      border: 2px solid #ff8282;
     }
 
     &:hover {
       padding: 10px 11px 10px 18px;
-      border: 1px solid #cdcdcd;
     }
 
     &:focus,
     &:active {
       padding: 9px 10px 9px 17px;
-      border: 2px solid @text-color;
-      outline: none;
     }
   }
 }
 
-.form__input:invalid + .footer__input-svg {
+.form__input:invalid + .form__input-svg {
   fill: #ff8282;
 }
 
-.form__input:hover + .footer__input-svg {
+.form__input:hover + .form__input-svg {
   fill: @less-h-color;
 }
 
-.form__input:focus + .footer__input-svg {
+.form__input:focus + .form__input-svg {
   fill: @btn-bg-color;
 }
 
-.footer__input-svg {
+.form__input-svg {
   position: absolute;
   display: block;
-  top: center;
 
   &--email {
     right: 16px;

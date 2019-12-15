@@ -33,16 +33,16 @@
       <div class="form__wrapper-top">
         <div class="form__wrapper-cat">
           <div class="form__wrapper-input">
-            <label class="form__label">Имя:*</label>
-            <input class="form__input" type="text" name="catname" placeholder="Барсик" required>
+            <label class="form__label" for="catname">Имя:*</label>
+            <input class="form__input" type="text" id="catname" name="catname" placeholder="Барсик" required>
           </div>
           <div class="form__wrapper-input">
-            <label class="form__label">Вес (кг):*</label>
-            <input class="form__input" type="number" step="0.01" name="weight" placeholder="7" required>
+            <label class="form__label" for="weight">Вес (кг):*</label>
+            <input class="form__input" id="weight" type="number" step="0.01" name="weight" placeholder="7" required>
           </div>
           <div class="form__wrapper-input">
-            <label class="form__label">Возраст (лет):</label>
-            <input class="form__input" type="number" name="age" placeholder="7">
+            <label class="form__label" for="age">Возраст (лет):</label>
+            <input class="form__input" type="number" id="age" name="age" placeholder="7">
           </div>
         </div>
         <div class="form__wrapper-radio">
@@ -60,14 +60,14 @@
           <div class="form__wrapper-input">
             <label class="form__label" for="email">E-mail:*</label>
             <input class="form__input form__input--email" id="email" type="email" name="email" placeholder="kuklachev@gmail.com" required>
-            <svg class="footer__input-svg footer__input-svg--email" width="18" height="14">
+            <svg class="form__input-svg form__input-svg--email" width="18" height="14">
               <use xlink:href="img/sprite.svg#email"></use>
             </svg>
           </div>
           <div class="form__wrapper-input">
             <label class="form__label" for="tel">Телефон:*</label>
             <input class="form__input form__input--tel" id="tel" type="tel" name="tel" placeholder="8 (960) 900-60-90" required>
-            <svg class="footer__input-svg footer__input-svg--tel" width="21" height="21">
+            <svg class="form__input-svg form__input-svg--tel" width="21" height="21">
               <use xlink:href="img/sprite.svg#phone"></use>
             </svg>
           </div>
