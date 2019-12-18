@@ -147,18 +147,23 @@
 .catalog__description-table tr {
   display: flex;
   justify-content: space-between;
-  width: 140px;
+  width: 138px;
   padding-bottom: 2px;
 
   @media @tablet {
     padding-bottom: 4px;
     margin-bottom: 5px;
-    width: 100%;
+    width: 249px;
     border-bottom: 1px solid #cdcdcd;
+  }
+
+  @media @desktop {
+    width: 169px;
   }
 }
 
 .catalog__description-table th {
+  width: 69px;
   font-size: 12px;
   line-height: 12px;
   font-weight: normal;
@@ -166,20 +171,31 @@
   color: @text-color;
 
   @media @tablet {
+    width: 125px;
     font-size: 16px;
     line-height: 20px;
+  }
+
+  @media @desktop {
+    width: 85px;
   }
 }
 
 .catalog__description-table td {
+  width: 69px;
   font-size: 12px;
   line-height: 12px;
   text-align: right;
   color: @text-color;
 
   @media @tablet {
+    width: 124px;
     font-size: 16px;
     line-height: 20px;
+  }
+
+  @media @desktop {
+    width: 84px;
   }
 }
 

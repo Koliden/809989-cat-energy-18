@@ -5,10 +5,13 @@
   <meta charset="utf-8">
   <title>HTML Academy: Кэт энерджи</title>
   <meta name="viewport" content="width=device-width,initial-scale=1">
-  <link href="css/style.css" rel="stylesheet">
+  <link href="css/style.min.css" rel="stylesheet">
 </head>
 
 <body class="index">
+  <div style="display: none;">
+    <include src="build/img/sprite.svg"></include>
+  </div>
   <header class="header container">
     <a class="header__logo">
       <picture>
@@ -87,7 +90,32 @@
           </div>
           <p class="live-example__food-costs">Затраты на питание: <span>15 000 руб.</span></p>
         </div>
-        <div class="live-example__slider">
+        <div class="live-example__slider slider">
+
+          <div class="slider__picture">
+            <picture>
+              <source type="image/webp" media="(min-width: 1300px)" srcset="img/content/before-desktop@1x.webp, img/content/before-desktop@2x.webp 2x">
+              <source type="image/webp" media="(min-width: 768px)" srcset="img/content/before-tablet@1x.webp, img/content/before-tablet@2x.webp 2x">
+              <source type="image/webp" srcset="img/content/before-mobile@1x.webp, img/content/before-mobile@2x.webp 2x">
+              <source media="(min-width: 1300px)" srcset="img/content/before-desktop@1x.png 1x, img/content/before-desktop@2x.png 2x">
+              <source media="(min-width: 768px)" srcset="img/content/before-tablet@1x.png 1x, img/content/before-tablet@2x.png 2x">
+              <img class="slider__picture-img slider__picture-img--display" src="img/content/before-mobile@1x.png" srcset="img/content/before-mobile@2x.png" width="320" height="240" alt="До Cat Energy Slim">
+            </picture>
+            <picture>
+              <source type="image/webp" media="(min-width: 1300px)" srcset="img/content/after-desktop@1x.webp, img/content/after-desktop@2x.webp 2x">
+              <source type="image/webp" media="(min-width: 768px)" srcset="img/content/after-tablet@1x.webp, img/content/after-tablet@2x.webp 2x">
+              <source type="image/webp" srcset="img/content/after-mobile@1x.webp, img/content/after-mobile@2x.webp 2x">
+              <source media="(min-width: 1300px)" srcset="img/content/after-desktop@1x.png 1x, img/content/after-desktop@2x.png 2x">
+              <source media="(min-width: 768px)" srcset="img/content/after-tablet@1x.png 1x, img/content/after-tablet@2x.png 2x">
+              <img class="slider__picture-img" src="img/content/after-mobile@1x.png" srcset="img/content/after-mobile@2x.png" width="320" height="240" alt="После Cat Energy Slim">
+            </picture>
+          </div>
+
+          <div class="slider__controls">
+            <a class="slider__controls-link">Было</a>
+            <a class="slider__controls-link">Стало</a>
+            <div class="toggle"></div>
+          </div>
         </div>
       </div>
     </section>
@@ -107,19 +135,19 @@
       <div class="footer__social">
         <a href="#" class="footer__social-link footer__social-link--vk">
           <svg width="22" height="12">
-            <use xlink:href="img/sprite.svg#iconVk"></use>
+            <use xlink:href="img/sprite.svg#icon-vk"></use>
           </svg>
           <span class="visually-hidden">Мы в Вконтакте</span>
         </a>
         <a href="#" class="footer__social-link footer__social-link--insta">
           <svg width="17" height="17">
-            <use xlink:href="img/sprite.svg#iconInsta"></use>
+            <use xlink:href="img/sprite.svg#icon-insta"></use>
           </svg>
           <span class="visually-hidden">Мы в Инстаграме</span>
         </a>
         <a href="#" class="footer__social-link footer__social-link--fb">
           <svg width="10" height="19">
-            <use xlink:href="img/sprite.svg#iconFb"></use>
+            <use xlink:href="img/sprite.svg#icon-fb"></use>
           </svg>
           <span class="visually-hidden">Мы в Фейсбуке</span>
         </a>
@@ -128,7 +156,7 @@
         <a class="footer__copyright-link" href="https://htmlacademy.ru/intensive/adaptive">HTML Academy</a>
         <a class="footer__copyright-link" href="https://htmlacademy.ru/intensive/adaptive">
           <svg class="footer__copyright-img" width="41" height="41">
-            <use xlink:href="img/sprite.svg#iconAcademy"></use>
+            <use xlink:href="img/sprite.svg#icon-academy"></use>
           </svg>
         </a>
       </div>
@@ -136,6 +164,7 @@
   </footer>
   <script src="https://api-maps.yandex.ru/2.1/?apikey=88fde531-13d5-47b7-a01a-8993fcae5f55&lang=ru_RU" type="text/javascript"></script>
   <script src="js/picturefill.min.js"></script>
+  <script src="js/svgxuse.js"></script>
   <script src="js/script.js"></script>
 </body>
 
