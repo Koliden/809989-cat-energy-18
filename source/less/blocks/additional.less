@@ -177,6 +177,7 @@
 }
 
 .additional__item-table th {
+  width: 200px;
   font-size: 14px;
   line-height: 14px;
   font-weight: normal;
@@ -184,11 +185,19 @@
   color: @text-color;
 
   @media @tablet {
+    width: 190px;
     font-size: 16px;
+    text-align: right;
+  }
+
+  @media @desktop {
+    width: 240px;
+    text-align: left;
   }
 }
 
 .additional__item-table td {
+  width: 80px;
   font-size: 14px;
   line-height: 14px;
   text-align: right;

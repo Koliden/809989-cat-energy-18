@@ -162,6 +162,7 @@
   font-size: 16px;
   line-height: 18px;
   color: @less-h-color;
+  cursor: pointer;
 
   &--radio,
   &--checkbox {
@@ -257,7 +258,7 @@
 
 .form__wrapper-radio input[type="radio"]:focus + .form__label--radio::before,
 .form__wrapper-checkbox input[type="checkbox"]:focus + .form__label--checkbox::before {
-  outline: 1px solid @text-color;
+  outline: 1px solid #cdcdcd;
 }
 
 .form__wrapper-radio input[type="radio"]:active + .form__label--radio,
@@ -265,17 +266,13 @@
   opacity: 0.3;
 }
 
-/* временно скрывает управление на input tupe="number"
-
-input::-webkit-outer-spin-button,
-input::-webkit-inner-spin-button {
-  -webkit-appearance: none;
+.form__input[type="number"] {
+  &::-webkit-outer-spin-button,
+  &::-webkit-inner-spin-button {
+    appearance: none;
+  }
+  appearance: textfield;
 }
-
-input[type="number"] {
-  -moz-appearance: textfield;
-}
-*/
 
 .form__input {
   padding: 13px 13px 12px 14px;
@@ -283,8 +280,11 @@ input[type="number"] {
   text-transform: uppercase;
   color: @text-color;
   border: 1px solid @border;
+  background-color: #ffffff;
+  border-radius: none;
+  outline: none;
 
-  &:invalid {
+  &--invalid {
     padding: 12px 12px 11px 13px;
     border: 2px solid #ff8282;
   }
@@ -298,7 +298,6 @@ input[type="number"] {
   &:active {
     padding: 12px 12px 11px 13px;
     border: 2px solid @text-color;
-    outline: none;
   }
 
   &::placeholder {
@@ -311,49 +310,46 @@ input[type="number"] {
     line-height: 30px;
 
 
-    &:invalid {
+    &--invalid {
       padding: 9px 10px 9px 17px;
-      border: 2px solid #ff8282;
     }
 
     &:hover {
       padding: 10px 11px 10px 18px;
-      border: 1px solid #cdcdcd;
     }
 
     &:focus,
     &:active {
       padding: 9px 10px 9px 17px;
-      border: 2px solid @text-color;
-      outline: none;
     }
   }
 }
 
-.form__input:invalid + .footer__input-svg {
+.form__input--invalid + .form__input-svg {
   fill: #ff8282;
 }
 
-.form__input:hover + .footer__input-svg {
+.form__input:hover + .form__input-svg {
   fill: @less-h-color;
 }
 
-.form__input:focus + .footer__input-svg {
+.form__input:focus + .form__input-svg {
   fill: @btn-bg-color;
 }
 
-.footer__input-svg {
+.form__input-svg {
   position: absolute;
   display: block;
-  top: center;
 
   &--email {
+    top: 15px;
     right: 16px;
     width: 18px;
     height: 14px;
   }
 
   &--tel {
+    top: 13px;
     right: 12px;
     width: 21px;
     height: 21px;
@@ -361,10 +357,12 @@ input[type="number"] {
 
   @media @tablet {
     &--email {
+      top: 20px;
       right: 19px;
     }
 
     &--tel {
+      top: 17px;
       right: 16px;
     }
   }

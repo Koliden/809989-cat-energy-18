@@ -25,8 +25,8 @@
 
 .footer__logo {
   width: 280px;
-  padding-top: 40px;
-  padding-bottom: 25px;
+  padding-top: 37px;
+  padding-bottom: 26px;
   text-align: center;
   border-bottom: 1px solid #d9d9d9;
 
@@ -56,17 +56,12 @@
   display: flex;
   justify-content: flex-start;
   align-items: center;
+  padding: 17px 0 14px;
   width: 280px;
-  min-height: 60px;
   border-bottom: 1px solid #d9d9d9;
 
   @media @tablet {
-    min-height: 44px;
-    border: none;
-  }
-
-  @media @desktop {
-    min-height: 50px;
+    padding-top: 6px;
     border: none;
   }
 }
@@ -88,35 +83,33 @@
   }
 
   &--insta {
-    padding: 8px 38px 0;
+    margin-right: 38px;
+    margin-left: 38px;
+    padding-top: 8px;
   }
 
   @media @tablet {
     border: none;
 
     &--insta {
-      padding: 2px 28px 0;
+      margin-right: 28px;
+      margin-left: 28px;
+      padding-top: 2px;
     }
 
     &--vk > svg {
       width: 30px;
-      height: auto;
+      height: 17px;
     }
 
     &--insta > svg {
       width: 23px;
-      height: auto;
+      height: 23px;
     }
 
     &--fb > svg {
       width: 14px;
-      height: auto;
-    }
-  }
-
-  @media @desktop {
-    &--insta {
-      padding: 2px 28px 0;
+      height: 27px;
     }
   }
 }
