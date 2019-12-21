@@ -1,6 +1,7 @@
 .header {
   display: flex;
   flex-direction: column;
+  flex-wrap: wrap;
   border-bottom: 1px solid @border;
 
   @media @tablet {
@@ -13,6 +14,7 @@
 .header__logo {
   min-height: 37px;
   padding: 11px 0 16px;
+  flex-shrink: 0;
 
   &:hover,
   &:focus {

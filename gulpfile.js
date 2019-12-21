@@ -23,7 +23,7 @@ gulp.task("compressjs", function (cb) {
   pump([
     gulp.src("source/js/script.js"),
     uglify(),
-    rename({suffix:'.min'}),
+    rename({suffix:".min"}),
     gulp.dest("build/js")
   ],
   cb
@@ -38,7 +38,7 @@ gulp.task("copy", function () {
   return gulp.src([
     "source/fonts/**/*.{woff,woff2}",
     "source/img/**",
-    "source/js/**"
+    "source/js/*.min.js"
   ], {
     base: "source"
   })
@@ -64,7 +64,7 @@ gulp.task("sprite", function () {
 gulp.task("webp", function () {
   return gulp.src("source/img/content/**/*.{png,jpg}")
   .pipe(webp({quality: 90}))
-  .pipe(gulp.dest("source/img/content"));
+  .pipe(gulp.dest("build/img/content"));
 });
 
 gulp.task("images", function () {
@@ -85,6 +85,7 @@ gulp.task("css", function () {
   .pipe(postcss([
     autoprefixer()
   ]))
+  .pipe(gulp.dest("build/css"))
   .pipe(csso())
   .pipe(rename("style.min.css"))
   .pipe(sourcemap.write("."))
@@ -112,6 +113,6 @@ gulp.task("refresh", function (done) {
   done();
 });
 
-gulp.task("build", gulp.series("clean", "copy", "css", "compressjs", "sprite", "html"));
+gulp.task("build", gulp.series("clean", "copy", "webp", "css", "compressjs", "sprite", "html"));
 
 gulp.task("start", gulp.series("build", "server"));
