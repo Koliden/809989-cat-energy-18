@@ -5,10 +5,15 @@
   @media @tablet {
     padding-bottom: 20px;
   }
+
+  @media @desktop {
+    padding-bottom: 0;
+  }
 }
 
 .advantage__title {
   padding-bottom: 40px;
+  color: @h-color;
   font-size: 36px;
   font-weight: normal;
 
@@ -38,6 +43,7 @@
 .advantage__item {
   position: relative;
   padding: 2px 0 24px 80px;
+  color: @text-color;
   font-size: 14px;
   line-height: 18px;
 
@@ -135,9 +141,9 @@
 
   @media @desktop {
     padding-top: 112px;
-    min-height: 220px;
+    min-height: 240px;
 
-    &:last-child {
+    &:nth-child(4n) {
       padding-right: 0;
       width: 245px;
     }

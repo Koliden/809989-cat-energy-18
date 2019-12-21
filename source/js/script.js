@@ -25,9 +25,9 @@ if (form) {
 
   btn.addEventListener("click", function (evt) {
 
-    if (!document.querySelector(".form").checkValidity()){
-      for (var i=0; i<inputsForCheck.length; i++ ){
-        if (!inputsForCheck[i].checkValidity()){
+    if (!document.querySelector(".form").checkValidity()) {
+      for (var i = 0; i < inputsForCheck.length; i++){
+        if (!inputsForCheck[i].checkValidity()) {
           if (!inputsForCheck[i].classList.contains("form__input--invalid")) {
             inputsForCheck[i].classList.add("form__input--invalid");
           }
