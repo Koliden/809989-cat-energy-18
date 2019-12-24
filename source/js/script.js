@@ -41,6 +41,31 @@ if (form) {
   });
 }
 
+var slider = document.querySelector(".slider");
+
+if (slider) {
+  var controllers = slider.querySelectorAll(".slider__controls-link");
+  var imges = slider.querySelectorAll(".slider__picture-img");
+  var sliderToggle = slider.querySelector(".slider__controls-toggle");
+  controllers[0].addEventListener("click", function (evt) {
+    evt.preventDefault();
+    if (!(imges[0].classList.contains("slider__picture-img--display"))) {
+      imges[1].classList.remove("slider__picture-img--display");
+      sliderToggle.classList.remove("slider__controls-toggle--right");
+      imges[0].classList.add("slider__picture-img--display");
+    }
+  });
+
+  controllers[1].addEventListener("click", function (evt) {
+    evt.preventDefault();
+    if (!(imges[1].classList.contains("slider__picture-img--display"))) {
+      imges[0].classList.remove("slider__picture-img--display");
+      sliderToggle.classList.add("slider__controls-toggle--right");
+      imges[1].classList.add("slider__picture-img--display");
+    }
+  });
+}
+
 var map = document.querySelector("#map");
 if (map) {
   ymaps.ready(function () {
